@@ -4,7 +4,7 @@
     <title>Message</title>
  </head>
 <body>
-    <!-- 자바스크립트가 메시지를 표시할 공간 -->
+
     <h1 id="intro-message"></h1>
 
     <script>
@@ -17,34 +17,25 @@
         const introductionFunctions = [
             function() { return "안녕하세요!"; },
             function() { return "제 이름은 김도홍입니다."; },
-            function() { return "코딩을 즐기고 있습니다."; },
             function() { return "만나서 반갑습니다. 😊"; }
         ];
 
-        // --- 여기서부터 빠진 부분을 추가했습니다 ---
 
         let currentIndex = 0;
-        // id가 "intro-message"인 h1 태그를 찾아서 변수에 저장합니다.
+
         const messageElement = document.getElementById('intro-message');
 
-        // 메시지를 화면에 표시하고 다음 순서를 준비하는 'showNextMessage' 함수를 정의합니다.
         function showNextMessage() {
-            // 현재 순서(currentIndex)에 맞는 함수를 호출하여 메시지를 가져옵니다.
+
             const currentMessage = introductionFunctions[currentIndex]();
-            // h1 태그의 내용을 현재 메시지로 변경합니다.
             messageElement.textContent = currentMessage;
 
-            // 다음 순서로 인덱스를 업데이트합니다.
-            // 배열의 끝에 도달하면 다시 0으로 돌아가도록 나머지 연산(%)을 사용합니다.
             currentIndex = (currentIndex + 1) % introductionFunctions.length;
         }
 
-        // 페이지가 처음 로드될 때 첫 번째 메시지를 바로 표시합니다.
-        showNextMessage();
-        
-        // --- 여기까지 추가 ---
 
-        // 이제 정상적으로 3초마다 위에서 정의한 showNextMessage 함수를 실행합니다.
+        showNextMessage();
+
         setInterval(showNextMessage, 3000);
     </script>
 
