@@ -1,48 +1,52 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>
-      dohong_world
-    </title>
-    <link href='../assets/style.css' rel='stylesheet' type='text/css'>
-  </head>
-  <body>
-    <div class="site-header">
-      <p class="site-title">Turtle Ipsum</p>
-      <img src="img\WIN_20250610_22_34_53_Pro.jpg" alt="공4">
-      <p class="site-subtitle">The World's Premier Turtle Fan Club</p>
-    </div>
-    <div class="main-nav">
-      <p class="nav-header">Resources</p>
-      <div class="nav-list">
-        <p class="nav-item nav-item-bull"><a href="https://www.youtube.com/watch?v=CMNry4PE93Y" aria-label="링크1">"I like turtles"</a></p>
-        <p class="nav-item nav-item-bull"><a href="https://en.wikipedia.org/wiki/Turtle" aria-label="링크2">"fkfkfkfkfk"</a></p>
-        <p class="nav-item nav-item-bull"><a href="https://en.wikipedia.org/wiki/Turtles_(chocolate)" aria-label="링크3"> Chocolate Turtles </a></p>
-      </div>
-    </div>
-    <div class="main-content">
-      <div>
-        <p class="page-title">Welcome to Turtle Ipsum. 
-            <a href="">Click here</a> to learn more.
-        </p>
-        <p class="article-text">
-          Turtle ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-        </p>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="footer-section">
-        <span class="button">Sign up for turtle news</span>
-      </div><div class="footer-section">
-        <p class="nav-header footer-title">
-          Internal Pages
-        </p>
-        <div class="nav-list">
-          <p class="nav-item nav-item-bull"><a href="../">Index</a></p>
-          <p class="nav-item nav-item-bull"><a href="../semantic">Semantic Example</a></p>
-        </div>
-      </div>
-      <p class="footer-copyright">&copy; 2016 Instrument</p>
-    </div>
-  </body>
-</html>
+ <!DOCTYPE html>
+ <html>
+ <head>
+    <title>Message</title>
+ </head>
+<body>
+    <!-- 자바스크립트가 메시지를 표시할 공간 -->
+    <h1 id="intro-message"></h1>
+
+    <script>
+        function getMessage(name) {
+            return `Hello, ${name}...`;
+        }
+
+        console.log(getMessage('김도홍'));
+
+        const introductionFunctions = [
+            function() { return "안녕하세요!"; },
+            function() { return "제 이름은 김도홍입니다."; },
+            function() { return "코딩을 즐기고 있습니다."; },
+            function() { return "만나서 반갑습니다. 😊"; }
+        ];
+
+        // --- 여기서부터 빠진 부분을 추가했습니다 ---
+
+        let currentIndex = 0;
+        // id가 "intro-message"인 h1 태그를 찾아서 변수에 저장합니다.
+        const messageElement = document.getElementById('intro-message');
+
+        // 메시지를 화면에 표시하고 다음 순서를 준비하는 'showNextMessage' 함수를 정의합니다.
+        function showNextMessage() {
+            // 현재 순서(currentIndex)에 맞는 함수를 호출하여 메시지를 가져옵니다.
+            const currentMessage = introductionFunctions[currentIndex]();
+            // h1 태그의 내용을 현재 메시지로 변경합니다.
+            messageElement.textContent = currentMessage;
+
+            // 다음 순서로 인덱스를 업데이트합니다.
+            // 배열의 끝에 도달하면 다시 0으로 돌아가도록 나머지 연산(%)을 사용합니다.
+            currentIndex = (currentIndex + 1) % introductionFunctions.length;
+        }
+
+        // 페이지가 처음 로드될 때 첫 번째 메시지를 바로 표시합니다.
+        showNextMessage();
+        
+        // --- 여기까지 추가 ---
+
+        // 이제 정상적으로 3초마다 위에서 정의한 showNextMessage 함수를 실행합니다.
+        setInterval(showNextMessage, 3000);
+    </script>
+
+</body>
+ </html>
