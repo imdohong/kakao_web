@@ -1,0 +1,123 @@
+/* 기본 초기화 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  width: 360px;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+/* 카드 영역 */
+.card {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+  background: white;
+}
+
+.top-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+h2 {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+/* 폼 스타일 */
+.form-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+  font-size: 13px;
+  align-self: flex-start;
+  margin: 5px 0 3px 10px;
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  background-color: #f8f8f8;
+}
+
+.search-btn {
+  width: 94%;
+  padding: 10px;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.search-btn:hover {
+  background-color: #0056b3;
+}
+
+/* 결과 영역 */
+.result {
+  display: none;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.loading {
+  display: none;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.errors {
+  color: red;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.clear-btn {
+  display: none;
+  margin-top: 15px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background-color: #d93636;
+}
+
+/* 다크모드 */
+@media (prefers-color-scheme: dark) {
+  body { background-color: #121212; color: #ddd; }
+  .card { background-color: #1f1f1f; border-color: #333; }
+  input { background-color: #2a2a2a; color: #fff; border-color: #555; }
+  .search-btn { background-color: #2196F3; }
+}

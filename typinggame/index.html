@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome 추가 -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <h1><i class="fa-solid fa-keyboard"></i> Typing Game!</h1>
+    <p>Practice your typing skills with a quote from Sherlock Holmes.<br>
+       Click <b>Start</b> to begin!</p>
+
+    <p id="quote"></p>
+    <p id="message"></p>
+
+    <div class="input-area">
+      <input type="text" aria-label="current word" id="typed-value" disabled />
+      <button type="button" id="start">
+        <i class="fa-solid fa-play"></i> Start
+      </button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
