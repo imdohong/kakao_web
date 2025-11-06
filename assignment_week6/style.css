@@ -1,0 +1,49 @@
+body {
+  background-color: #eef7f2;
+  font-family: "Helvetica", sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: #357a38;
+}
+
+.container {
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+  height: 500px;
+  background-color: #f1f1f1;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.plant-holder {
+  height: 100px;
+  margin: 10px;
+}
+
+.plant {
+  max-width: 80px;
+  cursor: grab;
+}
+
+#terrarium {
+  position: relative;
+  width: 80%;
+  height: 400px;
+  margin: 40px auto;
+  background-color: #d1e1df;
+  border-radius: 20px;
+  border: 2px solid #888;
+}
+
+.dirt {
+  width: 80%;
+  height: 10%;
+  background-color: #3a241d;
+  bottom: 0;
+  left: 10%;
+  border-radius: 0 0 20px 20px;
+  position: absolute;
+}
