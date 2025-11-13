@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Typing Gaame</title>
+  <title>Typing Game</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome 추가 -->
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
@@ -13,7 +12,9 @@
   <div class="container">
     <h1><i class="fa-solid fa-keyboard"></i> Typing Game!</h1>
     <p>Practice your typing skills with a quote from Sherlock Holmes.<br>
-       Click <b>Start</b> to begin!</p>
+      Click <b>Start</b> to begin!</p>
+    
+    <p id="high-score">Best Time: 0.00s</p>
 
     <p id="quote"></p>
     <p id="message"></p>
@@ -25,6 +26,17 @@
       </button>
     </div>
   </div>
+
+  <div id="modal-overlay"></div>
+  <div id="modal">
+    <button id="modal-close-btn">&times;</button>
+    <div id="modal-content">
+      <h2 id="modal-title">🎉 CONGRATULATIONS!</h2>
+      <p id="modal-message"></p>
+      <p id="modal-new-record"></p>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
