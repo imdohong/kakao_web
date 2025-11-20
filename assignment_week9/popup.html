@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 250px; padding: 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; }
+    h3 { margin-top: 0; color: #2c3e50; }
+    
+    .input-group { margin-bottom: 15px; }
+    input { width: 70%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; }
+    span { font-weight: bold; font-size: 16px; margin-left: 5px; }
+    
+    button {
+      width: 100%; background-color: #3498db; color: white; border: none;
+      padding: 10px; border-radius: 4px; cursor: pointer; font-size: 16px;
+    }
+    button:hover { background-color: #2980b9; }
+    
+    #result { margin-top: 20px; font-size: 18px; font-weight: bold; color: #e74c3c; min-height: 24px;}
+    .desc { font-size: 12px; color: #888; margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <h3>💵 환율 계산기</h3>
+  
+  <div class="input-group">
+    <input type="number" id="usdInput" placeholder="금액 입력" value="1">
+    <span>USD ($)</span>
+  </div>
+
+  <button id="convertBtn">원화로 변환하기 ⬇️</button>
+
+  <div id="result">결과가 여기에 나옵니다</div>
+  <div class="desc">기준: 실시간 고시 환율</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "1초 환율 계산기",
+  "version": "1.0",
+  "description": "현재 환율을 기반으로 달러를 원화로 빠르게 계산합니다.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab"]
+}
